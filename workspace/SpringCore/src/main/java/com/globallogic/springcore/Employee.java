@@ -1,5 +1,8 @@
 package com.globallogic.springcore;
 
+import java.util.List;
+import java.util.Set;
+
 class Employee {
 	
 
@@ -21,6 +24,8 @@ class Employee {
 
 	int id;
 	String name;
+	List<String> address;
+	Set<String>  mobile;
 	
 	public Employee() {
 
