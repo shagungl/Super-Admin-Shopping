@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <!-- Definition for employee bean using constructor dependency -->
+   <bean id = "employeeData" class = "com.globallogic.springcore.Employee">
+      <constructor-arg index="0" value="1001"/>
+      <constructor-arg index="1" value="Ravinder"/>
+   </bean>
+   
+   <bean id="employeeDataSetter" class="com.globallogic.springcore.Employee">
+	  <!-- setter injection using the neater 'ref' attribute -->
+	  <property name="id"  value="1002"  />
+	  <property name="name" value="kumar"/>
+    </bean>
+   
+   
+</beans>

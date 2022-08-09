@@ -30,28 +30,13 @@ public class HomeController {
 		 
 		
 		
-		map.forEach((k,v)->System.out.println("key "+k +" value "+v));
+		//map.forEach((k,v)->System.out.println("key "+k +" value "+v));
 		System.out.println("hello Controller get");
 		ModelAndView modelAndView=new ModelAndView("/home");
-		String name="ravinder";
-		modelAndView.addObject("name",name);
-		modelAndView.addObject("age","35");
-		modelAndView.addObject("salary",1000);
-		System.out.println("?");
+		//String name="ravinder";
+		modelAndView.addObject("name",map.get("name"));
+	
 		return modelAndView;
 	}
-	/*
-	 * @RequestMapping(method = RequestMethod.POST, path = "/") public void
-	 * postMessagePost() { System.out.println("hello Controlle post");
-	 * System.out.println("?"); }
-	 * 
-	 * @RequestMapping(method = RequestMethod.PUT, path = "/") public void
-	 * putMessage() { System.out.println("hello Controlle put");
-	 * System.out.println("?"); }
-	 * 
-	 * @RequestMapping(method = RequestMethod.DELETE, path = "/") public void
-	 * deleteMessage() { System.out.println("hello Controlle delete");
-	 * System.out.println("?"); }
-	 */
-	
+
 }
