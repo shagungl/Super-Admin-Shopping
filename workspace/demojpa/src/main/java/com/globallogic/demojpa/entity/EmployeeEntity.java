@@ -15,6 +15,11 @@ public class EmployeeEntity {
 	
 	
 
+	@Override
+	public String toString() {
+		return "EmployeeEntity [id=" + id + ", name=" + name + ", salary=" + salary + ", deptid=" + deptid + "]";
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
