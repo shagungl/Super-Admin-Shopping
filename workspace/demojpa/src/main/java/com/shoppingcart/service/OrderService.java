@@ -24,8 +24,8 @@ public class OrderService {
     }
 
     public OrderEntity getOrderDetail(int orderId) {
-        Optional<OrderEntity> order = this.OrderRepo.findById(orderId);
-        return order.isPresent() ? order.get() : null;
+        Optional<OrderEntity> order = this.orderRepository.findById(orderId);
+        order.isPresent() ? order.get() : null;
     }
 
     public float getCartAmount(List<ShoppingCart> shoppingCartList) {
