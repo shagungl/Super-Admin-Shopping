@@ -1,5 +1,4 @@
 package com.globallogic.demojpa.entity;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,13 +10,13 @@ import org.hibernate.annotations.GeneratorType;
 
 @Entity
 @Table(name="employee")
-public class EmployeeEntity {
+public class MerchantEntity {
 	
 	
 
 	@Override
 	public String toString() {
-		return "EmployeeEntity [id=" + id + ", name=" + name + ", salary=" + salary + ", deptid=" + deptid + "]";
+		return "MerchantEntity [id=" + id + ", name=" + name + ", pincode=" + pincode + ", GSTnum=" + GSTnum+", location= " + location +"]";
 	}
 
 	@Id
@@ -28,11 +27,20 @@ public class EmployeeEntity {
 	String name;
 	
 	@Column
-	double salary;
+	int pincode;
+	
+
+	@Column
+	int GSTnum;
 	
 	@Column
-	int deptid;
+	String location;
 	
+	
+	
+
+	
+
 	public int getId() {
 		return id;
 	}
@@ -48,21 +56,27 @@ public class EmployeeEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public double getSalary() {
-		return salary;
+	public int getPincode() {
+		return pincode;
 	}
 
-	public void setSalary(double salary) {
-		this.salary = salary;
+	public void setPincode(int pincode) {
+		this.pincode = pincode;
+	}
+	public int getGSTnum() {
+		return GSTnum;
 	}
 
-	public int getDeptid() {
-		return deptid;
+	public void setGSTnum(int GSTnum) {
+		this.GSTnum = GSTnum;
+	}
+	public String getLocation() {
+		return location;
 	}
 
-	public void setDeptid(int deptid) {
-		this.deptid = deptid;
+	public void setLocation(String location) {
+		this.location = location;
 	}
+
 
 }
